@@ -16,3 +16,7 @@ body {
     border: 5px dotted green;
     width: 80%;
 }
+
+.recipe img {
+    height: 200px;
+}

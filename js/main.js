@@ -1,4 +1,12 @@
+const resetRecipe = () => {
+  const removeOld = document.querySelector(".recipe");
+  while (removeOld.lastChild !== null) {
+    removeOld.removeChild(removeOld.lastChild);
+  }
+};
+
 const displayRecipe = (e) => {
+  resetRecipe();
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${e.target.textContent}`;
   fetch(url)
     .then((res) => res.json())
