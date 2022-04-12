@@ -7,12 +7,11 @@ const fetchRecipes = () => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      for(let item of data.meals) {
-          const content = document.querySelector('.content')
-          const foodName = document.createElement('h2')
-          foodName.textContent = item.strMeal
-          content.appendChild(foodName);
-          
+      for (let item of data.meals) {
+        const results = document.querySelector(".resultItems");
+        const foodName = document.createElement("h4");
+        foodName.textContent = item.strMeal;
+        results.appendChild(foodName);
       }
     });
 };

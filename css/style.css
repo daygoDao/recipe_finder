@@ -1,0 +1,18 @@
+body {
+    border: 5px dotted salmon;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+.results {
+    border: 5px dotted salmon;
+    display: flex;
+    flex-direction: row;
+}
+.resultItems {
+    border: 5px dotted blue;
+    width: 20%;
+}
+.recipe {
+    border: 5px dotted green;
+    width: 80%;
+}
