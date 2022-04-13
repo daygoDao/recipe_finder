@@ -21,3 +21,7 @@ body {
 .recipe img {
     height: 200px;
 }
+
+.food {
+    cursor: pointer;
+}

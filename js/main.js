@@ -48,6 +48,7 @@ const fetchRecipes = () => {
       for (let item of data.meals) {
         const results = document.querySelector(".resultItems");
         const foodName = document.createElement("h4");
+        foodName.classList.add('food');
         foodName.addEventListener("click", displayRecipe);
         foodName.textContent = item.strMeal;
         foodName.value = index;
