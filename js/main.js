@@ -5,6 +5,13 @@ const resetRecipe = () => {
   }
 };
 
+const resetResults = () => {
+  const removeOld = document.querySelector('.resultItems');
+  while(removeOld.lastChild !== null) {
+    removeOld.removeChild(removeOld.lastChild);
+  }
+}
+
 const displayRecipe = (e) => {
   resetRecipe();
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${e.target.textContent}`;
@@ -30,6 +37,8 @@ const displayRecipe = (e) => {
 };
 
 const fetchRecipes = () => {
+  resetResults();
+
   const userSearched = document.querySelector(".search").value;
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${userSearched}`;
   fetch(url)
